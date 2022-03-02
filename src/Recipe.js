@@ -1,7 +1,7 @@
 import React from 'react';
 import './Recipe.css';
 
-const Recipe = ({ title, calories, image, cuisine, dishType }) => {
+const Recipe = ({ title, calories, image, cuisine, dishType, recipe }) => {
   return (
     <div className='container'>
       <div className='recipe'>
@@ -10,11 +10,11 @@ const Recipe = ({ title, calories, image, cuisine, dishType }) => {
         </div>
         <div className='mealDetails'>
           <h1 className='label'>{title}</h1>
-          <p>ingredients.....</p>
+
           <ul className='additionalInfo'>
             <li>
               Calories
-              <p>{calories}</p>
+              <p>{Math.round(calories)}</p>
             </li>
             <li>
               Cuisine Type
@@ -25,6 +25,11 @@ const Recipe = ({ title, calories, image, cuisine, dishType }) => {
               <p>{dishType}</p>
             </li>
           </ul>
+          <button className='button'>
+            <a href={recipe} rel='noreferrer' target='_blank'>
+              view recipe
+            </a>
+          </button>
         </div>
       </div>
     </div>
