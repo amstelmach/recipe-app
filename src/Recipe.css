@@ -1,0 +1,81 @@
+.container {
+  margin: 30px auto;
+  max-width: 100%;
+  width: 800px;
+}
+
+.recipe {
+  display: flex;
+  border-radius: 5px;
+  background-color: #fff;
+  height: 225px;
+}
+
+.mealImage {
+  flex: 1;
+}
+
+.mealImage img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.mealDetails {
+  flex: 2;
+  padding: 30px;
+  position: relative;
+}
+
+.label {
+  font-size: 25px;
+  font-weight: 600;
+  margin: 0;
+  color: #405170;
+}
+
+.additionalInfo {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 25px;
+  padding: 0;
+}
+
+.additionalInfo li {
+  list-style-type: none;
+  font-weight: 400;
+  color: #818189;
+}
+
+.additionalInfo p {
+  font-weight: 400;
+  margin: 0 auto;
+  padding: 10px 0;
+  color: #405170;
+  font-weight: 600;
+}
+
+.button {
+  background-color: #a40865;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  padding: 20px 30px;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mealDetails .button {
+  position: absolute;
+  right: -10px;
+  bottom: -10px;
+}
+
+.button a {
+  color: #fff;
+  text-decoration: none;
+}
