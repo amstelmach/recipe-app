@@ -11,6 +11,8 @@ const App = () => {
   const [search, setSearch] = useState('');
   const [query, setQuery] = useState('');
 
+  // const [dietLabels, setDietLabels] = useState('vegan');
+
   // const ingredients = recipes.recipe.ingredients;
 
   useEffect(() => {
@@ -43,6 +45,7 @@ const App = () => {
         <input
           className='search-bar'
           type='text'
+          placeholder='enter ingredient'
           value={search}
           onChange={updateSearch}
         />
@@ -51,6 +54,17 @@ const App = () => {
         </button>
       </form>
 
+      {/* <select className='selectLabel'>
+        <option onClick={() => setDietLabels('balanced')}>balanced</option>
+        <option onClick={() => setDietLabels('high-protein')}>
+          high-protein
+        </option>
+        <option onClick={() => setDietLabels('high-fiber')}>high-fiber</option>
+        <option onClick={() => setDietLabels('low-fat')}>low-fat</option>
+        <option onClick={() => setDietLabels('low-carb')}>low-carb</option>
+        <option onClick={() => setDietLabels('low-sodium')}>low-sodium</option>
+      </select> */}
+
       {recipes.map((recipe) => (
         <Recipe
           title={recipe.recipe.label}
@@ -58,6 +72,7 @@ const App = () => {
           image={recipe.recipe.image}
           cuisine={recipe.recipe.cuisineType}
           dishType={recipe.recipe.dishType}
+          recipe={recipe.recipe.url}
           // ingredients={recipe.recipe.ingredients}
           // ingredients={recipe.recipe.ingredientLines.map((ingredient) => {
           //   return <>{ingredient}</>;
