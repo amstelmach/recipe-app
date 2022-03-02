@@ -11,6 +11,8 @@ const App = () => {
   const [search, setSearch] = useState('');
   const [query, setQuery] = useState('');
 
+  // const ingredients = recipes.recipe.ingredients;
+
   useEffect(() => {
     getRecipes();
   }, [query]);
@@ -48,11 +50,17 @@ const App = () => {
           search
         </button>
       </form>
+
       {recipes.map((recipe) => (
         <Recipe
           title={recipe.recipe.label}
           calories={recipe.recipe.calories}
           image={recipe.recipe.image}
+          cuisine={recipe.recipe.cuisineType}
+          dishType={recipe.recipe.dishType}
+          // ingredients={recipe.recipe.ingredients}
+          // ingredients={recipe.recipe.ingredientLines.map((ingredient) => {
+          //   return <>{ingredient}</>;
         />
       ))}
     </div>
