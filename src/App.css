@@ -2,3 +2,38 @@ body {
   font-family: 'Lato', sans-serif;
   background-color: #a7b9b0;
 }
+
+.search-form {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+}
+
+input.search-bar {
+  border-radius: 5px;
+  border: 1px solid #848c94;
+}
+
+input.search-bar:focus-visible {
+  outline: 2px solid #a40865;
+  /* outline-offset: -2px; */
+}
+
+.search-button {
+  background: rgb(164, 8, 101);
+  background: linear-gradient(
+    90deg,
+    rgba(164, 8, 101, 1) 0%,
+    rgba(106, 5, 66, 1) 50%,
+    rgba(121, 53, 93, 1) 100%
+  );
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  border: none;
+  height: 3rem;
+  width: 7rem;
+  border-radius: 1.5rem;
+}
