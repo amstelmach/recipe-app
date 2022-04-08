@@ -37,3 +37,8 @@ input.search-bar:focus-visible {
   width: 7rem;
   border-radius: 1.5rem;
 }
+
+.repices-container {
+  display: flex;
+  flex-wrap: wrap;
+}

@@ -1,7 +1,7 @@
 .container {
   margin: 30px auto;
   max-width: 100%;
-  width: 800px;
+  width: 600px;
 }
 
 .recipe {
@@ -85,4 +85,38 @@
 
 svg {
   fill: #fff;
+}
+
+@media all and (max-width: 670px) {
+  .container {
+    width: 80%;
+    height: 500px;
+  }
+
+  .recipe {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: #fff;
+    min-height: 450px;
+  }
+
+  .mealImage {
+    flex: 1;
+    height: 125px;
+    min-width: 300px;
+  }
+
+  .mealDetails {
+    flex: 2;
+    padding: 30px;
+    position: relative;
+  }
+
+  .mealImage img {
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
 }
